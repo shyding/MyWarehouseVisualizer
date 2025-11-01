@@ -7,9 +7,37 @@
 
 Download zip of code, unzip to a folder and launch index.html from a web server with a [WebGL enabled browser](https://get.webgl.org/). 
 
-## Demonstration	
+## Demonstration
 
 * [My Warehouse Visualizer Demo](https://mariodelgadosr.github.io/MyWarehouseVisualizer/)
+
+## Factory 3D Designer
+
+The repository now ships a Vue 3 + Vite rewrite of the factory designer. Launch the development server and open the SPA entry:
+
+```bash
+npm install
+npm run dev
+```
+
+Navigate to `http://localhost:5173/` to access the new interface which already supports:
+
+* Parameterised racks with adjustable rows/columns/levels rendered through Three.js.
+* Direct 3D authoring of multi-segment cubic Bézier crane rails using the mouse, including undo/clear controls and live previews.
+* Automatic crane motion preview that traverses the composed curve path at constant arc-length speed.
+
+### Seed data & benchmarks
+
+The tooling for generating the three demo data scales described in the specification is now available:
+
+```bash
+npm run seed:small   # outputs datasets/small
+npm run seed:medium  # outputs datasets/medium
+npm run seed:large   # outputs datasets/large
+npm run bench        # summarises the datasets into benchmarks/latest.json
+```
+
+> The project pins TypeScript to the 5.3 release line to stay compatible with the current `vue-tsc` patching logic used during builds (including Vercel deployments).
 
 ## Documentation
 
