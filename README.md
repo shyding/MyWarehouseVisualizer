@@ -16,12 +16,12 @@ Download zip of code, unzip to a folder and launch index.html from a web server 
 The repository now also包含一个独立的数字工厂建模原型工具，位于 `factoryDesigner.html`。通过现代浏览器打开该页面即可获得一个可交互的三维场景，支持：
 
 * 动态调整仓库货架的行、列与层数，并实时更新仓位编号。
-* 通过滑块驱动天车沿多段三阶贝塞尔轨道运动，并可在界面中直接编辑轨道段及控制点。
+
 * 预置库区分区颜色块，快速划分收货、暂存与发货区域。
 * 带有 AGV 与叉车的路径规划演示，可调节速度并控制路径显示/隐藏。
 * 一键重置视角，快速回到默认观察角度。
 
-该设计器基于 Three.js 渲染，与主应用共用现有依赖，无需额外安装即可体验。访问部署地址（例如 [my-warehouse-visualizer.vercel.app](https://my-warehouse-visualizer.vercel.app/)）时会自动跳转至该设计器页面，确保线上版本开箱即用。
+
 
 ## Documentation
 
