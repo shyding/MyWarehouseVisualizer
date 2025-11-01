@@ -7,9 +7,20 @@
 
 Download zip of code, unzip to a folder and launch index.html from a web server with a [WebGL enabled browser](https://get.webgl.org/). 
 
-## Demonstration	
+## Demonstration
 
 * [My Warehouse Visualizer Demo](https://mariodelgadosr.github.io/MyWarehouseVisualizer/)
+
+## Factory 3D Designer
+
+The repository now also包含一个独立的数字工厂建模原型工具，位于 `factoryDesigner.html`。通过现代浏览器打开该页面即可获得一个可交互的三维场景，支持：
+
+* 动态调整仓库货架的行、列与层数，并实时更新仓位编号。
+* 可视化天车与轨道，拖动滑块即可移动天车位置。
+* 预置库区分区颜色块，快速划分收货、暂存与发货区域。
+* 带有 AGV 与叉车的路径规划演示，可调节速度并控制路径显示/隐藏。
+
+该设计器基于 Three.js 渲染，与主应用共用现有依赖，无需额外安装即可体验。
 
 ## Documentation
 
