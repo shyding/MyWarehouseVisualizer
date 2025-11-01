@@ -1,0 +1,33 @@
+{
+  "name": "my-warehouse-visualizer",
+  "version": "2.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "cross-env VUE_TSC_PATCH_TYPESCRIPT=0 vue-tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "seed:small": "ts-node --esm scripts/seed.ts small",
+    "seed:medium": "ts-node --esm scripts/seed.ts medium",
+    "seed:large": "ts-node --esm scripts/seed.ts large",
+    "bench": "ts-node --esm scripts/bench.ts"
+  },
+  "dependencies": {
+    "@types/three": "^0.165.0",
+    "@vueuse/core": "^10.9.0",
+    "element-plus": "^2.6.3",
+    "mitt": "^3.0.1",
+    "pinia": "^2.1.7",
+    "three": "^0.165.0",
+    "vue": "^3.4.21"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@vitejs/plugin-vue": "^5.0.4",
+    "cross-env": "^7.0.3",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.3.3",
+    "vite": "^5.1.4",
+    "vue-tsc": "^1.8.27"
+  }
+}
