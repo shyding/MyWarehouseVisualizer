@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8" />
+    <title>工厂 3D 建模设计器</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/factoryDesigner.css" />
+    <script src="lib/three.min.js"></script>
+    <script src="lib/OrbitControls.js"></script>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>工厂 3D 建模设计器</h1>
+            <p>调整货架、天车与 AGV 路径，快速搭建数字化仓储工厂场景。</p>
+        </header>
+        <main>
+            <section id="controls">
+                <h2>货架设置</h2>
+                <div class="control-row">
+                    <label for="rows">仓库行数</label>
+                    <input id="rows" type="number" min="1" max="20" value="3" />
+                </div>
+                <div class="control-row">
+                    <label for="columns">仓库列数</label>
+                    <input id="columns" type="number" min="1" max="20" value="5" />
+                </div>
+                <div class="control-row">
+                    <label for="levels">货架层数</label>
+                    <input id="levels" type="number" min="1" max="8" value="3" />
+                </div>
+                <div class="control-row">
+                    <label for="showLabels">显示仓位编号</label>
+                    <input id="showLabels" type="checkbox" checked />
+                </div>
+
+                <h2>天车</h2>
+                <div class="control-row">
+                    <label for="cranePosition">天车位置</label>
+                    <input id="cranePosition" type="range" min="0" max="1" step="0.01" value="0.25" />
+                </div>
+                <h3 class="control-subheading">轨道设计</h3>
+                <div class="control-row">
+                    <label for="craneSegments">贝塞尔段数</label>
+                    <input id="craneSegments" type="number" min="1" max="6" value="2" />
+                </div>
+                <div id="craneTrackEditor" class="track-editor"></div>
+
+                <h2>AGV/叉车</h2>
+                <div class="control-row">
+                    <label for="agvSpeed">速度</label>
+                    <input id="agvSpeed" type="range" min="0.1" max="2" step="0.1" value="0.7" />
+                </div>
+                <div class="control-row">
+                    <button id="togglePath">显示/隐藏路径</button>
+                    <button id="pauseAgv">暂停动画</button>
+                </div>
+                <div class="control-row">
+                    <button id="resetView">重置视角</button>
+                </div>
+            </section>
+            <section id="viewport">
+                <canvas id="designer"></canvas>
+            </section>
+        </main>
+    </div>
+    <script src="lib/factoryDesigner.js"></script>
+</body>
+</html>
