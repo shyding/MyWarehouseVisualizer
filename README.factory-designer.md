@@ -43,39 +43,9 @@ npm run dev
 3. 每完成一段后可继续点击追加下一段，或使用“撤销”“清空轨道”重新规划。
 4. 天车会沿最新轨道循环运行，可观察轨道效果。
 
-> **构建兼容性提示**：由于 `vue-tsc` 在安装时需要对 TypeScript 做正则补丁，目前项目将 TypeScript 版本固定在 `~5.3.3`，以避免构建阶段（尤其是 Vercel 部署）出现 “Search string not found: "/supportedTSExtensions = .*(?=;)/"” 的错误。
-
-## 数据集生成与基准脚本
-
-按照需求规格说明书 §19/§20 的约定，仓储示例数据生成器与基准脚本已经接入：
-
-```bash
-npm run seed:small   # 生成 datasets/small 下的场景/拓扑/仓位清单
-npm run seed:medium
-npm run seed:large
-npm run bench        # 汇总三档数据指标到 benchmarks/latest.json
-```
-
-生成的数据结构：
-
-```
-datasets/
-  ├─ small/
-  │   ├─ scene.json
-  │   ├─ topology.overhead.json
-  │   ├─ topology.ground.json
-  │   └─ slots.csv
-  ├─ medium/
-  │   └─ ...
-  └─ large/
-      └─ ...
-```
-
-基准脚本会输出对象数量、货架/轨道段统计、AGV 拓扑规模以及 `scene.json` 的文件体积，结果存于 `benchmarks/latest.json`。
-
 ## 后续规划
 
 - 引入 `modules/track` 独立组件，补齐 C¹ 连续性约束、双轨生成与曲率热力图。
 - 新增 `modules/rack` 程序化编号、`modules/graph` 路网编辑与校核覆盖层。
-- 拓展 `services/seed.ts`、`scripts/bench.ts`，补充参数化开关、性能基准自动化与更丰富的衍生数据导出。
+- 集成 `services/seed.ts` 生成 small/medium/large 三档数据集与基准脚本。
 

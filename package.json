@@ -7,10 +7,10 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "seed:small": "ts-node --esm scripts/seed.ts small",
-    "seed:medium": "ts-node --esm scripts/seed.ts medium",
-    "seed:large": "ts-node --esm scripts/seed.ts large",
-    "bench": "ts-node --esm scripts/bench.ts"
+    "seed:small": "ts-node scripts/seed.ts small",
+    "seed:medium": "ts-node scripts/seed.ts medium",
+    "seed:large": "ts-node scripts/seed.ts large",
+    "bench": "ts-node scripts/bench.ts"
   },
   "dependencies": {
     "@types/three": "^0.165.0",
@@ -25,7 +25,7 @@
     "@types/node": "^20.11.30",
     "@vitejs/plugin-vue": "^5.0.4",
     "ts-node": "^10.9.2",
-    "typescript": "~5.3.3",
+    "typescript": "^5.4.2",
     "vite": "^5.1.4",
     "vue-tsc": "^1.8.27"
   }
