@@ -7,9 +7,26 @@
 
 Download zip of code, unzip to a folder and launch index.html from a web server with a [WebGL enabled browser](https://get.webgl.org/). 
 
-## Demonstration	
+## Demonstration
 
 * [My Warehouse Visualizer Demo](https://mariodelgadosr.github.io/MyWarehouseVisualizer/)
+
+## Factory 3D Designer
+
+The repository now ships a Vue 3 + Vite rewrite of the factory designer. Launch the development server and open the SPA entry:
+
+```bash
+npm install
+npm run dev
+```
+
+Navigate to `http://localhost:5173/` to access the new interface which already supports:
+
+* Parameterised racks with adjustable rows/columns/levels rendered through Three.js.
+* Direct 3D authoring of multi-segment cubic Bézier crane rails using the mouse, including undo/clear controls and live previews.
+* Automatic crane motion preview that traverses the composed curve path at constant arc-length speed.
+
+More modules (rack numbering, AGV graph editor, datasets, benchmarking scripts, etc.) will be layered on top following the architecture described in `README.factory-designer.md`.
 
 ## Documentation
 
